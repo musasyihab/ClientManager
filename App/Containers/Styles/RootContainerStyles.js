@@ -1,14 +1,19 @@
-import {StyleSheet} from 'react-native'
+import {StyleSheet, Platform} from 'react-native'
 import {Fonts, Metrics, Colors} from '../../Themes/'
 
 export default StyleSheet.create({
   applicationView: {
-    flex: 1
+    flex: 1,
+    backgroundColor: Colors.darkPrimary,
+    ...Platform.select({
+      ios: {
+        paddingTop: Metrics.statusBarHeight
+      }
+    })
   },
   container: {
     flex: 1,
-    justifyContent: 'center',
-    backgroundColor: Colors.background
+    justifyContent: 'center'
   },
   welcome: {
     fontSize: 20,

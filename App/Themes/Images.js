@@ -19,7 +19,13 @@ const images = {
   chevronRight: require('../Images/Icons/chevron-right.png'),
   hamburger: require('../Images/Icons/hamburger.png'),
   backButton: require('../Images/Icons/back-button.png'),
-  closeButton: require('../Images/Icons/close-button.png')
+  closeButton: require('../Images/Icons/close-button.png'),
+  whatsappIcon: require('../Images/Icons/whatsapp-icon.png'),
+  callIcon: require('../Images/Icons/call-icon.png'),
+  defaultAvatar: require('../Images/Icons/default-avatar.png'),
+  addIcon: require('../Images/Icons/add-icon.png'),
+  addPerson: require('../Images/Icons/add-person.png'),
+  mailIcon: require('../Images/Icons/mail-icon.png')
 }
 
 export default images
