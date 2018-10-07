@@ -7,7 +7,7 @@
 
 * For React Native boilerplate, I use [Ignite](https://github.com/infinitered/ignite)
 * For Image Picker library, I use [React Native Image Picker](https://github.com/react-community/react-native-image-picker)
-* For Snackbar component, I use [React Native Snackbar](https://github.com/cooperka/react-native-snackbar)
+* For Toast component, I use [React Native Simple Toast](https://github.com/vonovak/react-native-simple-toast)
 
 ## How to Run App
 

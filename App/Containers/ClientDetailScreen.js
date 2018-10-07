@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { ScrollView, Alert, Image, View, Linking } from 'react-native'
 import { connect } from 'react-redux'
-import Snackbar from 'react-native-snackbar';
+import Toast from 'react-native-simple-toast';
 
 // Styles
 import styles from './Styles/ClientDetailScreenStyle'
@@ -74,10 +74,8 @@ class ClientDetailScreen extends Component {
   _removeClient = () => {
     const { phoneNumber, name } = this.props.client;
     this.props.removeClient(phoneNumber);
-    Snackbar.show({
-      title: `${name} successfuly removed from client list.`,
-      duration: Snackbar.LENGTH_SHORT,
-    });
+    const toastText = `${name} successfuly removed from client list.`;
+    Toast.show(toastText, Toast.SHORT);
     resetNavigator(this.props.navigation);
   }
 

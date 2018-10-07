@@ -3,7 +3,7 @@ import { View, ScrollView, Text, KeyboardAvoidingView, Image, TouchableOpacity, 
 import { connect } from 'react-redux'
 import { isEmpty, get } from 'lodash'
 import ImagePicker from 'react-native-image-picker';
-import Snackbar from 'react-native-snackbar';
+import Toast from 'react-native-simple-toast';
 
 // Styles
 import styles from './Styles/ClientFormScreenStyle';
@@ -145,18 +145,15 @@ class ClientFormScreen extends Component {
       phoneNumber: phoneNumber,
       emailAddress: isEmpty(emailAddress) ? undefined : emailAddress
     };
-    let snackbarText;
+    let toastText;
     if (editMode) {
       this.props.updateClient(oldPhoneNumber, payload);
-      snackbarText = `${clientName} successfuly updated as client`;
+      toastText = `${clientName} successfuly updated as client`;
     } else {
-      snackbarText = `${clientName} successfuly added as client`;
+      toastText = `${clientName} successfuly added as client`;
       this.props.addNewClient(payload);
     }
-    Snackbar.show({
-      title: snackbarText,
-      duration: Snackbar.LENGTH_SHORT,
-    });
+    Toast.show(toastText, Toast.SHORT);
     resetNavigator(this.props.navigation);
     this.props.selectClient(payload);
     const headerTitle = clientName || 'Client Detail';

@@ -43,7 +43,7 @@
     "reduxsauce": "0.7.0",
     "seamless-immutable": "^7.1.4",
     "react-native-image-picker": "0.27.1",
-    "react-native-snackbar": "0.5.2"
+    "react-native-simple-toast": "0.0.8"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "^3.4.0",
